@@ -43,11 +43,11 @@ export class Sidebar extends Component {
                             </a>
 
                             <div class="collapse" id="collapseExample">
-                                <a href="#" className="item1 text-decoration-none px-3 py-2 d-block">
+                                <a href="/app/PARTENAIRE/Client" className="item1 text-decoration-none px-3 py-2 d-block">
                                 <FontAwesomeIcon className="me-3" icon={faCircleDot}></FontAwesomeIcon>
                                     Clients
                                     </a>
-                                <a href="#" className="item2 text-decoration-none px-3 py-2 d-block">
+                                <a href="/app/PARTENAIRE/Fournisseurs" className="item2 text-decoration-none px-3 py-2 d-block">
                                 <FontAwesomeIcon className="me-3" icon={faCircleDot}></FontAwesomeIcon>
                                     Fournisseurs
                                     </a>
