@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <>
             <section id="Navbar">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand">
                     <div className="container-fluid">
 
                         <img className="img-profile float-end" src={profile} alt="" />
