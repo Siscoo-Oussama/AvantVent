@@ -1,0 +1,32 @@
+#Navbar .img-profile{
+    width: 45px;
+    height: 45px;
+    margin-left: 19px;
+    border-radius: 50px;
+    margin-left: 95%;
+}
+#Navbar .profile-btn{
+    border-radius: 50px;
+    width: 55px;
+    height: 50px;
+    align-items: center;
+    padding: 10px 20px;
+}
+#Navbar .navbar-brand{
+    color: #350C3D;
+    margin-left: 20px;
+}
+#Navbar .logo{
+    width: 140px;
+    margin-left: 10px;
+}
+
+#Navbar .open-btn{
+    margin-top: -45px;
+}
+
+@media screen and(max-width:990px){
+    #Navbar .img-profile{
+        margin-left: 90%;
+    }
+}

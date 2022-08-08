@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --primary-font-family: 'Poppins', sans-serif;
+    --light-white:#f5f8fa;
+    --gray:#5e6278;
+    --gray-1:#e3e3e3;
+}
+body{
+    font-family:var(--primary-font-family);
+    font-size: 14px;
+} 
+
+/* Main CSS */ 
+.register{
+    padding:0 0 100px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size:contain;
+    min-height: 100%;
+}
+.register .logo img{
+    max-width:40%;
+    margin-top: 17px;
+}
+.register input{
+    background-color:#F5E9D4;
+    border-color: #D3AC67;
+    color: var(--gray);
+    border-radius: 15px;
+}
+
+.register input:focus{ 
+    box-shadow: none;
+}
+.register .submit_btn{
+    padding:15px;
+    font-weight: 500;
+}
+.register .login_with{
+    padding:15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition:0.3s ease-in-out;
+}
+.register .submit_btn:focus,
+.register .login_with:focus{
+    box-shadow: none;
+}
+.register .login_with:hover{
+    background-color:var(--gray-1);
+    border-color:var(--gray-1);
+}
+.register .login_with img{
+    width: 30px;
+    margin-top: -7px;
+    margin-right: 3px;
+}
+.register h3{
+    text-align: left;
+    color: #36013F;
+    font-size: 32px;
+}
+.register h4{
+    margin-top: 10px;
+    text-align: left;
+    color: #36013F;
+    margin-bottom: 50px;
+}
+.register .lets-singin {
+    color: #36013F;
+    font-size: 14px;
+}
+.register button{
+    color: #D3AC67;
+    background-color: #70387A;
+    border-radius: 20px;
+    font-size: 17px;
+}
+.register .facebook{
+    color: white;
+    background-color: #1877F2;
+    border-color: grey;
+    border-radius: 30px;
+    width: 230px;
+    height: 52px;
+}
+.register .google{
+    border-color: grey;
+    margin-top: 10px;
+    border-radius: 30px;
+    width: 230px;
+    height: 52px;
+
+}
+.register .btn-collapse{
+    margin-top: 15px;
+    background-color: transparent;
+}
+.register .collapse{
+    margin-top: 15px;
+}
+.register .img-collaspse{
+    width: 20px;
+    height: 17px;
+}
