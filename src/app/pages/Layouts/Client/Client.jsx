@@ -1,11 +1,14 @@
 import React from "react";
+import "./client.scss"
 
 
 const Client=()=>{
     return(
         <>
+        <section id="Client">
 
-        <h1>hello from client</h1>
+            <button className="btn btn-submit">submit</button>
+        </section>
         </>
     )
 }

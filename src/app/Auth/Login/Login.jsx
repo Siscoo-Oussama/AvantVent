@@ -3,12 +3,17 @@ import "./login.scss"
 import loginbackground from "../../../Assets/Images/b12.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import $ from "jquery";
 const Login = () => {
+
+   
 
 
     const [Email, SetEmail] = useState('');
     const [Password, setPassword] = useState('');
-    const [Error, SetError] = useState('');
     const [Role, SetRole] = useState('');
     const history = useNavigate();
 
@@ -21,7 +26,29 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
-    const Submit = () => {
+    const Submit = (e) => {
+        e.preventDefault();
+
+        axios.get('/sanctum/csrf-cookie').then(response => {
+            axios.post(`api/login`, {
+                email: Email,
+                password: Password,
+            }).then(response => {
+                if (response.data.status === 200) {
+                    localStorage.setItem('auth_token', response.data.token);
+                    localStorage.setItem('auth_name', response.data.username);
+                    toast.success(response.data.message);
+                    return history("/app/Dashbaord");
+
+                }
+                else if (response.data.status === 401) {
+                    toast.warning(response.data.message);
+                }
+                else {
+                    toast.error("Le champ email et mot de passe est obligatoire.")
+                }
+            });
+        });
 
     }
 
@@ -31,6 +58,7 @@ const Login = () => {
 
     return (
         <>
+            <ToastContainer/>
             <section id="login">
                 <div className="container">
                     <div className="row">
@@ -42,13 +70,11 @@ const Login = () => {
                                 <p className="logo-title">Welcome to Vigon System! 👋</p>
                                 <form action="" onSubmit={Submit} name="login">
                                     <div className="form-group">
-                                        <input type="username" name="username" className="form-control1" value={Email} onChange={handleEmailInputChange} placeholder="Email or Username" />
-                                        <span>{Error.email}</span>
+                                        <input type="email" name="email" className="form-control1" value={Email} onChange={handleEmailInputChange} placeholder="Email or Username" />
                                     </div>
                                     <div className="form-group">
 
                                         <input type="password" name="password" className="form-control1" value={Password} onChange={handlePassowrdInputChange} placeholder="Password" />
-                                        <span>{Error.password}</span>
                                     </div>
 
                                     <div className="col-md-12 text-center ">

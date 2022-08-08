@@ -1,0 +1,20 @@
+#AddClient{
+    .card{
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        .btn-add-client{
+            background-color: #7367F0;
+            color: white;
+        }
+        .btn-add-item{
+            background-color: #7367F0;
+            color: white;
+        }
+    }
+    .items-add{
+        button{
+            margin-left: 5px;
+        }
+    }
+}

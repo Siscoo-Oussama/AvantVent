@@ -1,114 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-/* Variables */
-:root{
-    --primary-font-family: 'Poppins', sans-serif;
-    --light-white:#f5f8fa;
-    --gray:#5e6278;
-    --gray-1:#e3e3e3;
-}
-body{
-    font-family:var(--primary-font-family);
-    font-size: 14px;
-} 
-
-/* Main CSS */ 
-.register{
-    padding:0 0 100px;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
-    background-size:contain;
-    min-height: 100%;
-}
-.register .logo img{
-    max-width:40%;
-    margin-top: 17px;
-}
-.register input{
-    background-color:#F5E9D4;
-    border-color: #D3AC67;
-    color: var(--gray);
-    border-radius: 15px;
-}
-
-.register input:focus{ 
-    box-shadow: none;
-}
-.register .submit_btn{
-    padding:15px;
-    font-weight: 500;
-}
-.register .login_with{
-    padding:15px;
-    font-size: 15px;
-    font-weight: 500;
-    transition:0.3s ease-in-out;
-}
-.register .submit_btn:focus,
-.register .login_with:focus{
-    box-shadow: none;
-}
-.register .login_with:hover{
-    background-color:var(--gray-1);
-    border-color:var(--gray-1);
-}
-.register .login_with img{
-    width: 30px;
-    margin-top: -7px;
-    margin-right: 3px;
-}
-.register h3{
-    text-align: left;
-    color: #36013F;
-    font-size: 32px;
-}
-.register h4{
-    margin-top: 10px;
-    text-align: left;
-    color: #36013F;
-    margin-bottom: 50px;
-}
-.register .lets-singin {
-    color: #36013F;
-    font-size: 14px;
-}
-.register button{
-    color: #D3AC67;
-    background-color: #70387A;
-    border-radius: 20px;
-    font-size: 17px;
-}
-.register .facebook{
-    color: white;
-    background-color: #1877F2;
-    border-color: grey;
-    border-radius: 30px;
-    width: 230px;
-    height: 52px;
-}
-.register .google{
-    border-color: grey;
-    margin-top: 10px;
-    border-radius: 30px;
-    width: 230px;
-    height: 52px;
-
-}
-.register .btn-collapse{
-    margin-top: 15px;
-    background-color: transparent;
-}
-.register .collapse{
-    margin-top: 15px;
-}
-.register .img-collaspse{
-    width: 20px;
-    height: 17px;
-}
+#register {
+    background-color: #f8f8f8;
+    .background-login {
+      background-color: #f8f8f8;
+      img {
+        margin-top: 100px;
+      }
+    }
+  
+    span{
+      margin-left: 45px;
+      color: red;
+      margin-top: 10px;
+    }
+  
+    .login-form {
+      background-color: white;
+  
+      color: #000;
+      .content {
+        margin-top: 250px;
+      }
+  
+      input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        display: block;
+        width: 80%;
+  
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        background-clip: padding-box;
+        border: 1px solid #DADADA;
+        border-radius: 0.25rem;
+        margin-bottom: 20px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+  
+      .btn-login {
+        background-color: #323c4e;
+        color: white;
+        width: 80%;
+        margin-bottom: 20px;
+      }
+      .logo-title {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .background-login {
+      img {
+        width: 550px;
+        margin-top: 150px;
+      }
+    }
+  
+  }
+  
+  @media screen and (max-width: 1220px) {
+    .background-login {
+      img {
+        width: 550px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    #register {
+      .background-login {
+          display: none;
+        }
+      .login-form {
+        input {
+          width: 90%;
+        }
+        .btn-login {
+          width: 90%;
+        }
+      }
+    }
+  }
+  
